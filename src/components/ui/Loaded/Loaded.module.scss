@@ -1,0 +1,23 @@
+.loaded {
+  margin: 0;
+  padding: 0;
+  display: inline-flex;
+  opacity: 0;
+  transition: all 0.3s ease-in-out;
+  animation: icon 1.3s ease-in-out;
+}
+
+
+@keyframes icon {
+  0% {
+    opacity: 0;
+  }
+
+  25% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0.3;
+  }
+}

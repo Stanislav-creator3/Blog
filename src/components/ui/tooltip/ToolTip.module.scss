@@ -1,0 +1,42 @@
+@import "../../../index.scss";
+
+.container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.tooltip {
+    position: absolute;
+    width: 100px;
+    font-size: 14px;
+    padding: 4px;
+    justify-content: center;
+    color: #FFFFFF;
+    background-color: $bg;
+    border-radius: 12px ;
+    text-align: center;
+    white-space: pre-line;
+    font-weight: 700 ;
+    pointer-events: none;
+}
+
+.exampleEnter {
+  opacity: 0;
+  transform:translateY(-100%);
+}
+.exampleEnterActive {
+  opacity: 1;
+  transform:translateY(0);
+  transition: opacity 350ms, transform 350ms;
+}
+.exampleExit {
+  opacity: 1;
+  transform:translateY(0);
+}
+.exampleExitActive {
+  opacity: 0;
+  transform:translateY(-100%);
+  transition: opacity 350ms, transform 350ms;
+}

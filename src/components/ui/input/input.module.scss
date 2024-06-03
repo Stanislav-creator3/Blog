@@ -1,0 +1,41 @@
+.field {
+    position: relative;
+    width: 100%;
+}
+.input {
+    position: relative;
+    width: 100%;
+    outline: 0;
+    border-radius: 3px;
+    border: none;
+    padding: 1rem;
+    margin: 0.3rem 0;
+
+    &__error {
+        margin-left: 5px;
+        font-size: 16px;
+        color: red;
+    }
+
+    &__icon {
+    position: absolute;
+    cursor: pointer;
+    z-index: 4;
+    top: 12px;
+    right: 15px;
+    width: 30px;
+    height: 30px;
+    padding: 5px;
+    margin: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    &:hover {
+        scale: 1.1;
+    }
+    }
+    &:disabled {
+        background-color: gray;
+    }
+}

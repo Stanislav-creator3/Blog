@@ -1,0 +1,14 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &__days {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        padding: 0.25rem;
+        font-size: 10px;
+        text-align: right;
+    }
+}

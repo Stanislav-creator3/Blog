@@ -1,0 +1,122 @@
+@import "../../index.scss";
+
+
+
+.input-block {
+  display: flex;
+  gap: 30px;
+}
+
+.title {
+  margin: 0 0 12px 0;
+  font-size: 24px;
+}
+
+.text {
+  margin: 0;
+  font-size: 16px;
+}
+
+.input {
+  align-self: center;
+  width: 100%;
+  max-width: 358px;
+  height: 52px;
+  outline: 0;
+  color: white;
+  padding: 1rem;
+  font: inherit;
+  border: 2px solid #2b2c37;
+  background: hsl(231, 14%, 10%);
+  border-radius: 50px;
+  padding-left: 50px;
+  background-image: url("../../icons/search-normal.svg");
+  background-position: 5% 50%;
+  background-repeat: no-repeat;
+  transition: all 0.35s ease-out;
+
+  &:focus {
+    border: 2px solid #de55de;
+    box-shadow: 0 0 120px hsl(300 67% 60% / 0.5);
+  }
+  &::placeholder {
+    color: #727884;
+  }
+}
+.form {
+  &__item {
+    display: flex;
+    justify-content: center;
+  }
+
+  &__text {
+    margin: 0 0 5px 5px;
+  }
+}
+.user {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  &__avatar {
+    width: 13rem;
+    height: 13rem;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    &:hover {
+      cursor: pointer;
+    }
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      border-radius: 50%;
+      -webkit-transition: 0.3s;
+      -moz-transition: 0.3s;
+      -ms-transition: 0.3s;
+      -o-transition: 0.3s;
+      transition: 0.3s;
+      pointer-events: none;
+    }
+    &::before {
+      background: rgba(0, 0, 0, 0);
+      top: 0;
+      right: 0;
+      left: 0;
+      bottom: 0;
+    }
+    &::after {
+      width: 26px;
+      height: 26px;
+      background-image: url("../../icons/edit-pen-pencil.svg");
+      -webkit-background-size: contain;
+      background-size: contain;
+      opacity: 0;
+      top: 50%;
+      left: 50%;
+      -webkit-transform: translate(-50%, -50%);
+      -moz-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+      -o-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+    }
+    &:hover::before {
+      background: rgba(0, 0, 0, 0.8);
+    }
+
+    &:hover::after {
+      opacity: 1;
+    }
+  }
+}
+
+.avatar {
+  width: 50%;
+  border-radius: 50%;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}

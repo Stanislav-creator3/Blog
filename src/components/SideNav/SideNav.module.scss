@@ -1,0 +1,83 @@
+.sidenav {
+  padding-top: 60px;
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  width: 15rem;
+  z-index: 1;
+  top: 0px;
+  left: 0;
+  background: white;
+  overflow-x: hidden;
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 90%;
+    margin: 0;
+    padding: 0 1rem;
+    font-size: 1.3rem;
+    font-weight: 500;
+    list-style: none;
+  }
+  &__list-item {
+    padding: 0.3rem;
+    &:nth-last-child(1) {
+      display: inline-flex;
+      width: 100%;
+      flex: 1;
+      align-items: end;
+    }
+  }
+  &__list-button {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    border-radius: 15px;
+    transition: all 0.3s ease;
+    padding: 0.5rem;
+    color: #6d7c90;
+
+    &:hover {
+      scale: 1.1;
+      color: white;
+      background-color: #3649f9;
+      box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+        rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+        rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    }
+    &:hover svg {
+      fill: white;
+    }
+  }
+  &__list-icon {
+    --button-size: calc(60px * 0.5);
+    width: var(--button-size);
+    height: var(--button-size);
+    padding: 5px;
+    margin: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: filter 300ms;
+    &:hover {
+      filter: brightness(1.2);
+    }
+    svg {
+      fill: #6d7c90;
+      width: 20px;
+      height: 20px;
+    }
+  }
+}
+
+.sidenav__list-button .sidenav__list-icon {
+  margin-right: 0.5rem;
+  &:hover {
+    filter: none;
+  }
+}
